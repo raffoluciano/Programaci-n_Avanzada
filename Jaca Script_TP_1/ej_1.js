@@ -1,1 +1,0 @@
-console.log(" mi edad es:"+ "212" );
