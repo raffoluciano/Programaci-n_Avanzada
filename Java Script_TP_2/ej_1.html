@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>
+        Pagina con Javascript
+    </title>
+    <Script language="javascript">
+
+        function Coche (marca, modelo, precio)
+        {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.precio = precio;
+        }
+
+        let coche1 = new Coche ("Renault", "Languna", 1800);
+        let coche2 = new Coche ("Ford", "Mondeo", 2300)
+        let coche3 = new Coche ("Mercedes", "600", 8500)
+        let coche4 = new Coche ("Seat", "Cordoba", 3000)
+        let cadena;
+
+        function Iva (valor)
+        {
+            let resultado = valor + ((21*valor)/100)
+            return resultado;
+
+        }
+
+        cadena = "El coche" + coche1.marca + " " + coche1.modelo + " Vale" + coche1.precio + " dolares" + " Valor con Iva " + Iva(coche1.precio);
+        document.write (cadena + "<br>");
+        cadena = "El coche" + coche2.marca + " " + coche2.modelo + " Vale" + coche2.precio + " dolares" + " Valor con Iva " + Iva(coche2.precio);
+        document.write (cadena + "<br>");
+        cadena = "El coche" + coche3.marca + " " + coche3.modelo + " Vale" + coche3.precio + " dolares" + " Valor con Iva " + Iva(coche3.precio);
+        document.write (cadena + "<br>");
+        cadena = "El coche" + coche4.marca + " " + coche4.modelo + " Vale" + coche4.precio + " dolares" + " Valor con Iva " + Iva(coche3.precio);
+        document.write (cadena + "<br>");
+           
+    </Script>
+</head>
+<body>
+    <h1>Objetos en javaScript</h1>
+</body>
+
+
+
+
+
+
+
+</html>

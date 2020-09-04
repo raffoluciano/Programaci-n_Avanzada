@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        Pagina con Javascript
+    </title>
+    <Script language="javascript">
+
+        const lastFM = async() => {
+            const apikey = '187a694ea9c99762720cc236aa550f12';
+            const resp = await fetch('http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=187a694ea9c99762720cc236aa550f12&format=json');
+            const artistas = await resp.json();
+
+            console.log(resp);
+            console.log(artistas);
+
+            const listaArt = document.querySelector("#table")
+            let lista;
+            artistas.artists.artist.forEach(pos => {
+                lista += `<tr>
+                                <td>${pos.name}</td>
+                                <td>${pos.playcount}</td>
+                                <td>${pos.listeners}</td>
+                            </tr>  
+                `;
+                listaArt.innerHTML = lista;
+            })
+        }
+
+
+
+
+
+lastFM();
+
+
+       //console.log(getUser())
+        //listarArtista()
+        //artistas ();
+       
+           
+    </Script>
+</head>
+<body>
+    <h1>Objetos en javaScript</h1>
+    
+</body>
